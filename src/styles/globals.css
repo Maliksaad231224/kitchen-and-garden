@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Layout improvements for better navbar alignment */
+body {
+	margin: 0;
+	padding: 0;
+	-webkit-text-size-adjust: 100%;
+	text-size-adjust: 100%;
+	/* Prevent horizontal scroll on zoom */
+	overflow-x: hidden;
+}
+
+/* Ensure consistent spacing and alignment for the main content */
+main {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+/* Properly center and space the main content with better mobile responsiveness */
+.content-container {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 1rem;
+	width: 100%;
+	flex: 1;
+
+	/* Better mobile spacing */
+	@media (min-width: 640px) {
+		max-width: 640px;
+	}
+	@media (min-width: 768px) {
+		max-width: 768px;
+		padding: 0 1.5rem;
+	}
+	@media (min-width: 1024px) {
+		max-width: 1024px;
+	}
+	@media (min-width: 1280px) {
+		max-width: 1280px;
+	}
+	@media (min-width: 1536px) {
+		max-width: 72rem; /* corresponds to max-w-6xl */
+		padding: 0 2rem;
+	}
+}
+
+/* Ensure images don't overflow on mobile */
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Better text responsiveness */
+h1, h2, h3, h4, h5, h6 {
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+	line-height: 1.2;
+}
+
+/* Improve mobile text readability */
+@media (max-width: 640px) {
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.3;
+	}
+	p {
+		line-height: 1.6;
+	}
+}
+
+/* Ensure grid layouts work well on mobile */
+.grid {
+	overflow-x: auto;
+}
+
+/* Fix for flex items on mobile */
+.flex {
+	min-width: 0;
+}
