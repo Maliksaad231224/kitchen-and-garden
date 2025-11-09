@@ -33,14 +33,14 @@ const Header = () => {
               <GlobalSearch />
             </div>
 
-            {/* Right side - Account Creation and Admin */}
+            {/* Right side - Account Creation and Admin (hidden on mobile, hamburger shown) */}
             <div className="flex items-center space-x-1 sm:space-x-2">
-              {/* Mobile Search Toggle */}
+              {/* Mobile Search Toggle (hidden to show only hamburger on mobile) */}
               <Button
                 variant="ghost"
                 size="sm"
                 aria-label="Search"
-                className="md:hidden h-8 w-8 p-0"
+                className="hidden"
               >
                 <Search className="h-4 w-4" />
               </Button>
@@ -50,9 +50,9 @@ const Header = () => {
                 <ShoppingCart className="h-4 w-4" />
               </Button>
 
-              {/* Authentication - Sign up, Sign in, Admin */}
+              {/* Authentication - Sign up, Sign in, Admin (hide on small screens; mobile menu contains auth links) */}
               {!session ? (
-                <div className="flex items-center space-x-1 sm:space-x-2">
+                <div className="hidden md:flex items-center space-x-1 sm:space-x-2">
                   <Link href="/signup">
                     <Button
                       size="sm"
@@ -74,7 +74,7 @@ const Header = () => {
                   </Link>
                 </div>
               ) : (
-                <div className="flex items-center space-x-1 sm:space-x-2">
+                <div className="hidden md:flex items-center space-x-1 sm:space-x-2">
                   {/* User Avatar/Name */}
                   <div className="hidden sm:flex items-center space-x-2">
                     <div className="w-7 h-7 bg-red-500 rounded-full flex items-center justify-center">
@@ -96,17 +96,19 @@ const Header = () => {
                 </div>
               )}
 
-              {/* Admin Link */}
-              <Link href="/admin/login">
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="text-gray-500 hover:text-gray-300 text-xs px-1 sm:px-2 py-1 h-8 font-medium"
-                >
-                  <span className="hidden xs:inline">Admin</span>
-                  <span className="xs:hidden">ADM</span>
-                </Button>
-              </Link>
+              {/* Admin Link (hidden on small screens) */}
+              <div className="hidden md:block">
+                <Link href="/admin/login">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    className="text-gray-500 hover:text-gray-300 text-xs px-1 sm:px-2 py-1 h-8 font-medium"
+                  >
+                    <span className="hidden xs:inline">Admin</span>
+                    <span className="xs:hidden">ADM</span>
+                  </Button>
+                </Link>
+              </div>
 
               {/* Mobile Menu Toggle */}
               <Button
