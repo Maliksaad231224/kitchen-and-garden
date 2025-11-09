@@ -140,9 +140,9 @@ export default function AdminDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-red-50 via-pink-50 to-red-50">
+    <div className="min-h-screen bg-gray-50">
       {/* Header */}
-  <header className="bg-white shadow-sm border-b border-red-100">
+  <header className="bg-white shadow-sm border-b border-gray-100">
         <div className="max-w-7xl mx-auto px-4 py-6 flex justify-between items-center">
           <div>
             <h1 className="text-3xl font-bold text-gray-900">Recipe Dashboard</h1>
@@ -171,7 +171,7 @@ export default function AdminDashboard() {
             className={`mb-6 p-4 rounded-lg flex items-center gap-2 ${
               saveStatus === "saving" || saveStatus === "success"
                 ? "bg-green-50 border border-green-200 text-green-800"
-                : "bg-red-50 border border-red-200 text-red-800"
+                : "bg-gray-50 border border-gray-200 text-gray-800"
             }`}
           >
             {saveStatus === "saving" && <Loader className="h-5 w-5 animate-spin" />}
@@ -186,7 +186,7 @@ export default function AdminDashboard() {
         )}
 
         {/* Create/Edit Form */}
-  <div className={`bg-white rounded-xl shadow-md p-8 mb-8 transition-all ${showForm ? "border-2 border-red-400" : ""}`}>
+  <div className={`bg-white rounded-xl shadow-md p-8 mb-8 transition-all ${showForm ? "border-2 border-gray-200" : ""}`}>
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-2xl font-bold text-gray-900">
               {editingPost ? "Edit Recipe" : "Create New Recipe"}
@@ -356,7 +356,7 @@ export default function AdminDashboard() {
               posts.map((post) => (
                 <div
                   key={post.id}
-                  className="p-6 hover:bg-red-50 transition-colors group"
+                  className="p-6 hover:bg-gray-50 transition-colors group"
                 >
                   <div className="flex gap-4">
                     {post.image && (

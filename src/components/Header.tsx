@@ -188,6 +188,12 @@ const Header = () => {
                       </button>
                     </div>
                   )}
+                  {/* Mobile Admin link - visible inside mobile menu for quick admin access */}
+                  <div className="pt-3">
+                    <Link href="/admin/login" className="block text-white hover:text-red-300 transition-colors font-semibold text-sm">
+                      ADMIN
+                    </Link>
+                  </div>
                 </div>
               </div>
             </nav>
