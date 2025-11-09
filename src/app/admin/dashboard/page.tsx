@@ -226,7 +226,7 @@ export default function AdminDashboard() {
                     }
                     placeholder="e.g., Classic Chocolate Chip Cookies"
                     required
-                    className="border-gray-300 focus:border-red-400 focus:ring-red-400"
+                    className="border-gray-300 focus:border-gray-400 focus:ring-gray-400"
                   />
                 </div>
 
@@ -240,7 +240,7 @@ export default function AdminDashboard() {
                       setFormData({ ...formData, author: e.target.value })
                     }
                     placeholder="Your name or Kitchen & Garden"
-                    className="border-gray-300 focus:border-red-400 focus:ring-red-400"
+                    className="border-gray-300 focus:border-gray-400 focus:ring-gray-400"
                   />
                 </div>
               </div>
@@ -255,7 +255,7 @@ export default function AdminDashboard() {
                     setFormData({ ...formData, excerpt: e.target.value })
                   }
                   placeholder="A short summary that will appear in recipe listings"
-                  className="border-gray-300 focus:border-red-400 focus:ring-red-400"
+                  className="border-gray-300 focus:border-gray-400 focus:ring-gray-400"
                 />
               </div>
 
@@ -270,7 +270,7 @@ export default function AdminDashboard() {
                   }
                   placeholder="https://example.com/image.jpg"
                   type="url"
-                  className="border-gray-300 focus:border-red-400 focus:ring-red-400"
+                  className="border-gray-300 focus:border-gray-400 focus:ring-gray-400"
                 />
                 {formData.image && (
                   <img
@@ -399,7 +399,7 @@ export default function AdminDashboard() {
                         variant="outline"
                         size="sm"
                         onClick={() => handleDelete(post.id)}
-                        className="text-red-600 hover:text-red-700 hover:bg-red-50"
+                        className="text-red-600 hover:text-red-700 hover:bg-gray-50"
                       >
                         <Trash2 size={18} />
                       </Button>

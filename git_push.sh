@@ -1,3 +1,3 @@
 git add --all
-git commit -m "Update files"
+git commit -m "delete button"
 git push -u origin master
